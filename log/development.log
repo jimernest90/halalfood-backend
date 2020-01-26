@@ -36020,3 +36020,593 @@ Processing by RestaurantsController#index as HTML
 Completed 200 OK in 90ms (Views: 0.2ms | ActiveRecord: 69.4ms | Allocations: 8842)
 
 
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 08:56:04 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (8.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 26]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 27]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 302ms (Views: 0.9ms | ActiveRecord: 12.4ms | Allocations: 8947)
+
+
+Started PUT "/restaurants/26" for 127.0.0.1 at 2020-01-17 09:17:06 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"id"=>"26", "restaurant"=>{}}
+  [1m[36mRestaurant Load (1.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:33:in `update'
+[31mUnpermitted parameters: :id, :restaurant[0m
+Completed 200 OK in 21ms (Views: 0.8ms | ActiveRecord: 2.7ms | Allocations: 1516)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 09:17:07 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 26]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (11.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 27]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (8.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (4.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (5.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (16.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (5.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 83ms (Views: 0.2ms | ActiveRecord: 53.6ms | Allocations: 8864)
+
+
+Started GET "/restaurants/" for ::1 at 2020-01-17 09:26:01 -0500
+Processing by RestaurantsController#index as */*
+  Parameters: {"restaurant"=>{"name"=>"Frangossdfsasdfds"}}
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 26]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 27]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 0.5ms | ActiveRecord: 3.5ms | Allocations: 8949)
+
+
+Started PUT "/restaurants/26" for 127.0.0.1 at 2020-01-17 09:34:52 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"id"=>"26", "restaurant"=>{}}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:33:in `update'
+[31mUnpermitted parameters: :id, :restaurant[0m
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 1516)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 09:34:52 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (6.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 26]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 27]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (2.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (8.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (63.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 136ms (Views: 0.2ms | ActiveRecord: 85.0ms | Allocations: 8864)
+
+
+Started PUT "/restaurants/26" for 127.0.0.1 at 2020-01-17 09:35:08 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"id"=>"26", "restaurant"=>{}}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:33:in `update'
+[31mUnpermitted parameters: :id, :restaurant[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1428)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 09:35:08 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (2.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 26]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 27]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (7.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (27.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (5.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (6.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 76ms (Views: 0.1ms | ActiveRecord: 52.0ms | Allocations: 8844)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 09:35:43 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 26]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (4.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 27]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (5.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (41.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 77ms (Views: 0.2ms | ActiveRecord: 53.5ms | Allocations: 8842)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2020-01-17 09:36:29 -0500
+Processing by RestaurantsController#create as HTML
+  Parameters: {"restaurants"=>[{"id"=>26, "name"=>"Milk & Honey", "description"=>"Coffee shop serving unique cafe fare & baked goods in a rustic, light-filled space with a cool vibe.", "img"=>"https://s3-media0.fl.yelpcdn.com/bphoto/v2fYTntlq-zOTYUHEYyPmA/348s.jpg", "link"=>"https://milkandhoneycafeny.com/", "created_at"=>"2020-01-15T22:23:20.277Z", "updated_at"=>"2020-01-15T22:23:20.277Z", "reviews"=>[{"id"=>11, "name"=>"Alina", "rating"=>"4/5", "comment"=>"this place has the best french toast", "created_at"=>"2020-01-15T22:24:35.432Z", "updated_at"=>"2020-01-15T22:24:35.432Z", "restaurant_id"=>26}]}, {"id"=>27, "name"=>"Rocca Cafe & Lounge", "description"=>"Mediterranean dishes are served at this waterfront destination with modern decor & outdoor seating.", "img"=>"https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg", "link"=>"https://www.roccacafelounge.com/", "created_at"=>"2020-01-15T22:23:20.288Z", "updated_at"=>"2020-01-15T22:23:20.288Z", "reviews"=>[{"id"=>12, "name"=>"Sabi", "rating"=>"5/5", "comment"=>"Great food with a great view", "created_at"=>"2020-01-15T22:24:35.445Z", "updated_at"=>"2020-01-15T22:24:35.445Z", "restaurant_id"=>27}]}, {"id"=>28, "name"=>"Affy's Premium Grill", "description"=>"Where great expectations are met with great steak", "img"=>"http://www.affyspremiumgrill.com/wp-content/uploads/2015/07/gallery-1-850x500.jpg", "link"=>"http://www.affyspremiumgrill.com/", "created_at"=>"2020-01-15T22:23:20.294Z", "updated_at"=>"2020-01-15T22:23:20.294Z", "reviews"=>[{"id"=>13, "name"=>"Anum", "rating"=>"4/5", "comment"=>"The best steaks!", "created_at"=>"2020-01-15T22:24:35.457Z", "updated_at"=>"2020-01-15T22:24:35.457Z", "restaurant_id"=>28}]}, {"id"=>30, "name"=>"Top Thai", "description"=>"Relaxed option offering traditional Thai cooking, with a full bar & a warm ambiance.", "img"=>"https://duyt4h9nfnj50.cloudfront.net/resized/1541790117265-w2880-05.jpg", "link"=>"https://www.topthainyc.com/", "created_at"=>"2020-01-15T22:23:20.301Z", "updated_at"=>"2020-01-15T22:23:20.301Z", "reviews"=>[]}, {"id"=>31, "name"=>"Sagar Chinese", "description"=>"New York renowned Halal Indian-style Chinese and Asian Fusion restaurant.", "img"=>"https://duyt4h9nfnj50.cloudfront.net/resized/1537560399572-w2880-5c.jpg", "link"=>"https://sagarchinese.com/", "created_at"=>"2020-01-15T22:23:20.305Z", "updated_at"=>"2020-01-15T22:23:20.305Z", "reviews"=>[]}, {"id"=>32, "name"=>"Addy's BBQ", "description"=>"At Addy’s BBQ, we believe that excellent food and hospitality is at the heart of all great establishments. Our classic dishes are prepared with only the finest ingredients and under the watchful eye of our head chef, so that his passion and standards of excellence are evident in each plate.", "img"=>"http://addysbbq.com/wp-content/uploads/2018/10/AddysBBQ_Hero_2880x2304-2-1000x600.jpg", "link"=>"http://addysbbq.com/", "created_at"=>"2020-01-15T22:23:20.309Z", "updated_at"=>"2020-01-15T22:23:20.309Z", "reviews"=>[]}, {"id"=>33, "name"=>"The Gully", "description"=>"Urban Desi Eatery", "img"=>"http://thegullynyc.com/img/gallery/1.jpg", "link"=>"http://thegullynyc.com/", "created_at"=>"2020-01-15T22:23:20.313Z", "updated_at"=>"2020-01-15T22:23:20.313Z", "reviews"=>[]}, {"id"=>29, "name"=>"Frangos Peri Peri", "description"=>"Counter-serve spot serving chicken dishes paired with a variety of sauces in a vibrant setting.", "img"=>"data:image/jpeg;base64,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", "link"=>"https://frangos-peri-peri.business.site/", "created_at"=>"2020-01-15T22:23:20.297Z", "updated_at"=>"2020-01-15T22:27:17.464Z", "reviews"=>[{"id"=>14, "name"=>"Ali", "rating"=>"4/5", "comment"=>"I don't usually like thai food but this place was really good", "created_at"=>"2020-01-15T22:24:35.463Z", "updated_at"=>"2020-01-15T22:24:35.463Z", "restaurant_id"=>29}]}], "name"=>"hi", "description"=>"Mediterranean dishes are served at this waterfront destination with modern decor & outdoor seating.", "img"=>"https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg", "link"=>"https://www.roccacafelounge.com/", "restaurant"=>{"name"=>"hi", "description"=>"Mediterranean dishes are served at this waterfront destination with modern decor & outdoor seating.", "img"=>"https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg", "link"=>"https://www.roccacafelounge.com/"}}
+[31mUnpermitted parameters: :restaurants, :restaurant[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurants_controller.rb:23:in `create'
+  [1m[36mRestaurant Create (22.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "img", "link", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "hi"], ["description", "Mediterranean dishes are served at this waterfront destination with modern decor & outdoor seating."], ["img", "https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg"], ["link", "https://www.roccacafelounge.com/"], ["created_at", "2020-01-17 14:36:29.589354"], ["updated_at", "2020-01-17 14:36:29.589354"]]
+  ↳ app/controllers/restaurants_controller.rb:23:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurants_controller.rb:23:in `create'
+Completed 201 Created in 36ms (Views: 2.1ms | ActiveRecord: 25.6ms | Allocations: 2895)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 09:36:32 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 40]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 26]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 27]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 4.3ms | Allocations: 9796)
+
+
+Started DELETE "/restaurants/40" for 127.0.0.1 at 2020-01-17 09:36:39 -0500
+Processing by RestaurantsController#destroy as */*
+  Parameters: {"id"=>"40"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+  [1m[36mRestaurant Destroy (2.0ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 40]]
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+Completed 204 No Content in 44ms (ActiveRecord: 8.8ms | Allocations: 2282)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 09:36:40 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 26]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 27]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 3.7ms | Allocations: 8842)
+
+
+Started DELETE "/restaurants/27" for 127.0.0.1 at 2020-01-17 11:09:52 -0500
+Processing by RestaurantsController#destroy as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+  [1m[36mRestaurant Destroy (0.4ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 27]]
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+Completed 204 No Content in 22ms (ActiveRecord: 8.4ms | Allocations: 2369)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 11:09:53 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (1.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (6.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 26]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (2.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (48.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (3.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 101ms (Views: 0.8ms | ActiveRecord: 64.8ms | Allocations: 7761)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2020-01-17 11:13:20 -0500
+Processing by RestaurantsController#create as HTML
+  Parameters: {"restaurants"=>[{"id"=>26, "name"=>"Milk & Honey", "description"=>"Coffee shop serving unique cafe fare & baked goods in a rustic, light-filled space with a cool vibe.", "img"=>"https://s3-media0.fl.yelpcdn.com/bphoto/v2fYTntlq-zOTYUHEYyPmA/348s.jpg", "link"=>"https://milkandhoneycafeny.com/", "created_at"=>"2020-01-15T22:23:20.277Z", "updated_at"=>"2020-01-15T22:23:20.277Z", "reviews"=>[{"id"=>11, "name"=>"Alina", "rating"=>"4/5", "comment"=>"this place has the best french toast", "created_at"=>"2020-01-15T22:24:35.432Z", "updated_at"=>"2020-01-15T22:24:35.432Z", "restaurant_id"=>26}]}, {"id"=>28, "name"=>"Affy's Premium Grill", "description"=>"Where great expectations are met with great steak", "img"=>"http://www.affyspremiumgrill.com/wp-content/uploads/2015/07/gallery-1-850x500.jpg", "link"=>"http://www.affyspremiumgrill.com/", "created_at"=>"2020-01-15T22:23:20.294Z", "updated_at"=>"2020-01-15T22:23:20.294Z", "reviews"=>[{"id"=>13, "name"=>"Anum", "rating"=>"4/5", "comment"=>"The best steaks!", "created_at"=>"2020-01-15T22:24:35.457Z", "updated_at"=>"2020-01-15T22:24:35.457Z", "restaurant_id"=>28}]}, {"id"=>30, "name"=>"Top Thai", "description"=>"Relaxed option offering traditional Thai cooking, with a full bar & a warm ambiance.", "img"=>"https://duyt4h9nfnj50.cloudfront.net/resized/1541790117265-w2880-05.jpg", "link"=>"https://www.topthainyc.com/", "created_at"=>"2020-01-15T22:23:20.301Z", "updated_at"=>"2020-01-15T22:23:20.301Z", "reviews"=>[]}, {"id"=>31, "name"=>"Sagar Chinese", "description"=>"New York renowned Halal Indian-style Chinese and Asian Fusion restaurant.", "img"=>"https://duyt4h9nfnj50.cloudfront.net/resized/1537560399572-w2880-5c.jpg", "link"=>"https://sagarchinese.com/", "created_at"=>"2020-01-15T22:23:20.305Z", "updated_at"=>"2020-01-15T22:23:20.305Z", "reviews"=>[]}, {"id"=>32, "name"=>"Addy's BBQ", "description"=>"At Addy’s BBQ, we believe that excellent food and hospitality is at the heart of all great establishments. Our classic dishes are prepared with only the finest ingredients and under the watchful eye of our head chef, so that his passion and standards of excellence are evident in each plate.", "img"=>"http://addysbbq.com/wp-content/uploads/2018/10/AddysBBQ_Hero_2880x2304-2-1000x600.jpg", "link"=>"http://addysbbq.com/", "created_at"=>"2020-01-15T22:23:20.309Z", "updated_at"=>"2020-01-15T22:23:20.309Z", "reviews"=>[]}, {"id"=>33, "name"=>"The Gully", "description"=>"Urban Desi Eatery", "img"=>"http://thegullynyc.com/img/gallery/1.jpg", "link"=>"http://thegullynyc.com/", "created_at"=>"2020-01-15T22:23:20.313Z", "updated_at"=>"2020-01-15T22:23:20.313Z", "reviews"=>[]}, {"id"=>29, "name"=>"Frangos Peri Peri", "description"=>"Counter-serve spot serving chicken dishes paired with a variety of sauces in a vibrant setting.", "img"=>"data:image/jpeg;base64,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", "link"=>"https://frangos-peri-peri.business.site/", "created_at"=>"2020-01-15T22:23:20.297Z", "updated_at"=>"2020-01-15T22:27:17.464Z", "reviews"=>[{"id"=>14, "name"=>"Ali", "rating"=>"4/5", "comment"=>"I don't usually like thai food but this place was really good", "created_at"=>"2020-01-15T22:24:35.463Z", "updated_at"=>"2020-01-15T22:24:35.463Z", "restaurant_id"=>29}]}], "name"=>"Rocca Cafe & Lounge", "description"=>"Mediterranean dishes are served at this waterfront destination with modern decor & outdoor seating.", "img"=>"https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg", "link"=>"https://www.roccacafelounge.com/", "restaurant"=>{"name"=>"Rocca Cafe & Lounge", "description"=>"Mediterranean dishes are served at this waterfront destination with modern decor & outdoor seating.", "img"=>"https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg", "link"=>"https://www.roccacafelounge.com/"}}
+[31mUnpermitted parameters: :restaurants, :restaurant[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurants_controller.rb:23:in `create'
+  [1m[36mRestaurant Create (0.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "img", "link", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Rocca Cafe & Lounge"], ["description", "Mediterranean dishes are served at this waterfront destination with modern decor & outdoor seating."], ["img", "https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg"], ["link", "https://www.roccacafelounge.com/"], ["created_at", "2020-01-17 16:13:20.112257"], ["updated_at", "2020-01-17 16:13:20.112257"]]
+  ↳ app/controllers/restaurants_controller.rb:23:in `create'
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurants_controller.rb:23:in `create'
+Completed 201 Created in 15ms (Views: 1.0ms | ActiveRecord: 6.9ms | Allocations: 2846)
+
+
+Started DELETE "/restaurants/26" for 127.0.0.1 at 2020-01-17 11:19:16 -0500
+Processing by RestaurantsController#destroy as */*
+  Parameters: {"id"=>"26"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+  [1m[36mRestaurant Destroy (0.4ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 26]]
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+Completed 204 No Content in 13ms (ActiveRecord: 7.5ms | Allocations: 2369)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 11:19:17 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (4.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 41]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (4.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (28.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (12.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (7.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 132ms (Views: 0.2ms | ActiveRecord: 59.8ms | Allocations: 7619)
+
+
+Started PUT "/restaurants/29" for 127.0.0.1 at 2020-01-17 11:19:35 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"id"=>"29", "restaurant"=>{}}
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:33:in `update'
+[31mUnpermitted parameters: :id, :restaurant[0m
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 1417)
+
+
+Started PUT "/restaurants/29" for 127.0.0.1 at 2020-01-17 11:28:37 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"id"=>"29", "restaurant"=>{}}
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:33:in `update'
+[31mUnpermitted parameters: :id, :restaurant[0m
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 1.1ms | Allocations: 1505)
+
+
+Started PUT "/restaurants/30" for 127.0.0.1 at 2020-01-17 11:31:12 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"id"=>"30", "restaurant"=>{}}
+  [1m[36mRestaurant Load (11.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:33:in `update'
+[31mUnpermitted parameters: :id, :restaurant[0m
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 11.0ms | Allocations: 1424)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 11:31:12 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (6.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 41]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (2.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 0.5ms | ActiveRecord: 11.6ms | Allocations: 7622)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-17 11:38:20 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (1.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 41]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 5.0ms | Allocations: 7705)
+
+
+Started GET "/" for ::1 at 2020-01-23 20:43:00 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hadeeqasaman/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hadeeqasaman/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.0ms | Allocations: 310)
+Completed 200 OK in 24ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 1627)
+
+
+Started GET "/restaurants" for ::1 at 2020-01-23 20:43:06 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (38.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (12.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 41]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 150ms (Views: 0.2ms | ActiveRecord: 88.3ms | Allocations: 21020)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-23 20:43:15 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 41]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (183.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (2.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 237ms (Views: 0.2ms | ActiveRecord: 190.1ms | Allocations: 7623)
+
+
+Started PUT "/restaurants/31" for 127.0.0.1 at 2020-01-23 20:43:27 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"id"=>"31", "restaurant"=>{}}
+  [1m[36mRestaurant Load (21.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:33:in `update'
+[31mUnpermitted parameters: :id, :restaurant[0m
+Completed 200 OK in 95ms (Views: 0.7ms | ActiveRecord: 21.8ms | Allocations: 1746)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-23 20:43:27 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (9.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 41]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (28.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (7.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (6.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (4.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 0.1ms | ActiveRecord: 61.0ms | Allocations: 7622)
+
+
+Started PUT "/restaurants/32" for 127.0.0.1 at 2020-01-23 20:48:49 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"id"=>"32", "restaurant"=>{}}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:33:in `update'
+[31mUnpermitted parameters: :id, :restaurant[0m
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 1419)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-23 20:48:49 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (4.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (5.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 41]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (127.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (48.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (10.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (11.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 288ms (Views: 0.2ms | ActiveRecord: 208.2ms | Allocations: 7602)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2020-01-23 20:49:56 -0500
+Processing by RestaurantsController#create as HTML
+  Parameters: {"restaurants"=>[{"id"=>41, "name"=>"Rocca Cafe & Lounge", "description"=>"Mediterranean dishes are served at this waterfront destination with modern decor & outdoor seating.", "img"=>"https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg", "link"=>"https://www.roccacafelounge.com/", "created_at"=>"2020-01-17T16:13:20.112Z", "updated_at"=>"2020-01-17T16:13:20.112Z", "reviews"=>[]}, {"id"=>28, "name"=>"Affy's Premium Grill", "description"=>"Where great expectations are met with great steak", "img"=>"http://www.affyspremiumgrill.com/wp-content/uploads/2015/07/gallery-1-850x500.jpg", "link"=>"http://www.affyspremiumgrill.com/", "created_at"=>"2020-01-15T22:23:20.294Z", "updated_at"=>"2020-01-15T22:23:20.294Z", "reviews"=>[{"id"=>13, "name"=>"Anum", "rating"=>"4/5", "comment"=>"The best steaks!", "created_at"=>"2020-01-15T22:24:35.457Z", "updated_at"=>"2020-01-15T22:24:35.457Z", "restaurant_id"=>28}]}, {"id"=>30, "name"=>"Top Thai", "description"=>"Relaxed option offering traditional Thai cooking, with a full bar & a warm ambiance.", "img"=>"https://duyt4h9nfnj50.cloudfront.net/resized/1541790117265-w2880-05.jpg", "link"=>"https://www.topthainyc.com/", "created_at"=>"2020-01-15T22:23:20.301Z", "updated_at"=>"2020-01-15T22:23:20.301Z", "reviews"=>[]}, {"id"=>31, "name"=>"Sagar Chinese", "description"=>"New York renowned Halal Indian-style Chinese and Asian Fusion restaurant.", "img"=>"https://duyt4h9nfnj50.cloudfront.net/resized/1537560399572-w2880-5c.jpg", "link"=>"https://sagarchinese.com/", "created_at"=>"2020-01-15T22:23:20.305Z", "updated_at"=>"2020-01-15T22:23:20.305Z", "reviews"=>[]}, {"id"=>32, "name"=>"Addy's BBQ", "description"=>"At Addy’s BBQ, we believe that excellent food and hospitality is at the heart of all great establishments. Our classic dishes are prepared with only the finest ingredients and under the watchful eye of our head chef, so that his passion and standards of excellence are evident in each plate.", "img"=>"http://addysbbq.com/wp-content/uploads/2018/10/AddysBBQ_Hero_2880x2304-2-1000x600.jpg", "link"=>"http://addysbbq.com/", "created_at"=>"2020-01-15T22:23:20.309Z", "updated_at"=>"2020-01-15T22:23:20.309Z", "reviews"=>[]}, {"id"=>33, "name"=>"The Gully", "description"=>"Urban Desi Eatery", "img"=>"http://thegullynyc.com/img/gallery/1.jpg", "link"=>"http://thegullynyc.com/", "created_at"=>"2020-01-15T22:23:20.313Z", "updated_at"=>"2020-01-15T22:23:20.313Z", "reviews"=>[]}, {"id"=>29, "name"=>"Frangos Peri Peri", "description"=>"Counter-serve spot serving chicken dishes paired with a variety of sauces in a vibrant setting.", "img"=>"data:image/jpeg;base64,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", "link"=>"https://frangos-peri-peri.business.site/", "created_at"=>"2020-01-15T22:23:20.297Z", "updated_at"=>"2020-01-15T22:27:17.464Z", "reviews"=>[{"id"=>14, "name"=>"Ali", "rating"=>"4/5", "comment"=>"I don't usually like thai food but this place was really good", "created_at"=>"2020-01-15T22:24:35.463Z", "updated_at"=>"2020-01-15T22:24:35.463Z", "restaurant_id"=>29}]}], "name"=>"another rest", "description"=>"good food ", "img"=>"https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg", "link"=>"https://detroitmopedworks.com", "restaurant"=>{"name"=>"another rest", "description"=>"good food ", "img"=>"https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg", "link"=>"https://detroitmopedworks.com"}}
+[31mUnpermitted parameters: :restaurants, :restaurant[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurants_controller.rb:23:in `create'
+  [1m[36mRestaurant Create (17.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "img", "link", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "another rest"], ["description", "good food "], ["img", "https://s3-media4.fl.yelpcdn.com/bphoto/TGG5ItcSA0PAD4xcFtMJzA/l.jpg"], ["link", "https://detroitmopedworks.com"], ["created_at", "2020-01-24 01:49:56.345442"], ["updated_at", "2020-01-24 01:49:56.345442"]]
+  ↳ app/controllers/restaurants_controller.rb:23:in `create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurants_controller.rb:23:in `create'
+Completed 201 Created in 41ms (Views: 1.7ms | ActiveRecord: 20.8ms | Allocations: 2982)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-23 20:49:59 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (36.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (45.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 41]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (17.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 42]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (2.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (2.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 258ms (Views: 0.2ms | ActiveRecord: 107.3ms | Allocations: 8549)
+
+
+Started DELETE "/restaurants/42" for 127.0.0.1 at 2020-01-23 20:50:08 -0500
+Processing by RestaurantsController#destroy as */*
+  Parameters: {"id"=>"42"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `set_restaurant'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+  [1m[36mRestaurant Destroy (2.4ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 42]]
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/restaurants_controller.rb:44:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 4.2ms | Allocations: 2303)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2020-01-23 20:50:08 -0500
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (2.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 41]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 28]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 30]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (4.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 31]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 32]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 33]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 29]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 49ms (Views: 0.7ms | ActiveRecord: 11.6ms | Allocations: 7600)
+
+
